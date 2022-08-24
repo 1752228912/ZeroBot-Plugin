@@ -375,7 +375,7 @@ func init() { // 插件主体
 			ctx.SendChain(
 				message.Text(
 					nick,
-					" 小黑子就是你啦！",
+					" 就是你啦！",
 				),
 			)
 		})
