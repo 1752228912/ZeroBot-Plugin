@@ -41,14 +41,10 @@ func init() { // 插件主体
 		Handle(func(ctx *zero.Ctx) {
 			var nickname = zero.BotConfig.NickName[0]
 			switch {
-			case poke.Load(ctx.Event.GroupID).AcquireN(3):
+			case poke.Load(ctx.Event.GroupID).AcquireN():
 				// 5分钟共8块命令牌 一次消耗3块命令牌
 				time.Sleep(time.Second * 1)
 				ctx.SendChain(message.Text("你干嘛哈哈哎哟"))
-			case poke.Load(ctx.Event.GroupID).AcquireN(0):
-				// 5分钟共8块命令牌 一次消耗3块命令牌
-				time.Sleep(time.Second * 1)
-				ctx.SendChain(message.Text("香翅捞饭是不是"))
 			case poke.Load(ctx.Event.GroupID).AcquireN():
 				// 5分钟共8块命令牌 一次消耗3块命令牌
 				time.Sleep(time.Second * 1)
