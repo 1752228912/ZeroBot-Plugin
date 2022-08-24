@@ -44,11 +44,11 @@ func init() { // 插件主体
 			case poke.Load(ctx.Event.GroupID).AcquireN(3):
 				// 5分钟共8块命令牌 一次消耗3块命令牌
 				time.Sleep(time.Second * 1)
-				ctx.SendChain(message.Text("鸡冠头 背带裤 我是ikun你记住"))
+				ctx.SendChain(message.Text("鸡冠头,背带裤,我是", nickname, "ikun你记住"))
 			case poke.Load(ctx.Event.GroupID).Acquire():
 				// 5分钟共8块命令牌 一次消耗1块命令牌
 				time.Sleep(time.Second * 1)
-				ctx.SendChain(message.Text("你干嘛哈哈哎哟"))
+				ctx.SendChain(message.Text("你惹", nickname, "是不是香翅捞饭~"))
 			default:
 				// 频繁触发，不回复
 			}
