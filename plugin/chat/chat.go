@@ -29,10 +29,10 @@ func init() { // 插件主体
 			time.Sleep(time.Second * 1)
 			ctx.SendChain(message.Text(
 				[]string{
-					"你惹" + nickname + "是不是香翅捞饭~"，
-					"我是练习两年半的蔡徐困,来吧展示~"，
-					"我是" + nickname + "你记住(っ●ω●)っ"，
-					"是不是香精煎鱼~"，
+					"你惹" + nickname + "是不是香翅捞饭~",
+					"我是练习两年半的蔡徐困,来吧展示~",
+					"我是" + nickname + "你记住(っ●ω●)っ",
+					"是不是香精煎鱼~",
 				}[rand.Intn(4)],
 			))
 		})
