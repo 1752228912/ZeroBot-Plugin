@@ -28,9 +28,9 @@ func init() {
 			log.Debugln(position, getUpTime)
 			hour, minute, second := timeDuration(getUpTime)
 			if (hour == 0 && minute == 0 && second == 0) || hour >= 24 {
-				ctx.SendChain(message.Reply(ctx.Event.MessageID), message.Text(fmt.Sprintf("早安成功！你是今天第%d个起床的", position)))
+				ctx.SendChain(message.Reply(ctx.Event.MessageID), message.Text(fmt.Sprintf("小黑子早安！你是今天第%d个起床的，食不食油饼", position)))
 			} else {
-				ctx.SendChain(message.Reply(ctx.Event.MessageID), message.Text(fmt.Sprintf("早安成功！你的睡眠时长为%d时%d分%d秒,你是今天第%d个起床的", hour, minute, second, position)))
+				ctx.SendChain(message.Reply(ctx.Event.MessageID), message.Text(fmt.Sprintf("小黑子早安！你的睡眠时长为%d时%d分%d秒,你是今天第%d个起床的", hour, minute, second, position)))
 			}
 		})
 	engine.OnFullMatch("晚安", isEvening, zero.OnlyGroup).SetBlock(true).
@@ -39,9 +39,9 @@ func init() {
 			log.Debugln(position, sleepTime)
 			hour, minute, second := timeDuration(sleepTime)
 			if (hour == 0 && minute == 0 && second == 0) || hour >= 24 {
-				ctx.SendChain(message.Reply(ctx.Event.MessageID), message.Text(fmt.Sprintf("晚安成功！你是今天第%d个睡觉的", position)))
+				ctx.SendChain(message.Reply(ctx.Event.MessageID), message.Text(fmt.Sprintf("小黑子晚安！你是今天第%d个睡觉的，睡死你，就你睡最快", position)))
 			} else {
-				ctx.SendChain(message.Reply(ctx.Event.MessageID), message.Text(fmt.Sprintf("晚安成功！你的清醒时长为%d时%d分%d秒,你是今天第%d个睡觉的", hour, minute, second, position)))
+				ctx.SendChain(message.Reply(ctx.Event.MessageID), message.Text(fmt.Sprintf("小黑子晚安！你的清醒时长为%d时%d分%d秒,你是今天第%d个睡觉的", hour, minute, second, position)))
 			}
 		})
 }
